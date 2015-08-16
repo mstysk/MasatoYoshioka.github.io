@@ -1,0 +1,33 @@
+{
+  "name": "2048",
+  "version": "0.0.0",
+  "description": "2046 game",
+  "main": "./app/app.js",
+  "scripts": {
+    "build": "browserify --debug ./src/app/app.js > ./www/dist/js/app.js",
+    "build-dist": "NODE_ENV=production browserify ./src/app/app.js | uglifyjs -m > ./www/dist/js/app.js",
+    "watch": "watchify --debug ./app/app.js -v -o ./www/dist/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Masato Yoshioka",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-watchify": "^0.5.0",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.4.24",
+    "watchify": "^3.3.1"
+  },
+  "dependencies": {
+    "flux": "^2.0.3",
+    "object-assign": "^3.0.0",
+    "react": "^0.13.3"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
