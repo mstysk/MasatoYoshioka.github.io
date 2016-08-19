@@ -1,0 +1,26 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MasatoYoshioka/MasatoYoshioka.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasatoYoshioka/MasatoYoshioka.github.io/issues"
+  },
+  "homepage": "https://github.com/MasatoYoshioka/MasatoYoshioka.github.io",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0"
+  }
+}
