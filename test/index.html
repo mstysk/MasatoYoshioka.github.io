@@ -1,11 +1,41 @@
-<h1>a</h1>
-
+<!Doctype html>
+<html>
+<head>
+<title>Geo sample</title>
+</head>
+<body>
+<div id="root">
+</div>
 <script>
-  document.onLoad = (function(){
-  if ("geolocation" in navigator) {
-  /* geolocation is available */
+document.onLoad = (function(){
+var use = false;
+if ("geolocation" in navigator) {
+  alert('Geo 使える');
+  use = true;
 } else {
   /* geolocation IS NOT available */
+  alert('Geo 使えない');
+ use =false;
 }
-  })
+
+var root = document.getElementById("root");
+
+if(use) {
+navigator.geolocation.getCurrentPosition(function(position) {
+ console.log(position);
+ var lat = document.createElement('span');
+ lat.innerHTML = 'lat:' + position.coords.latitude;
+ var lon = document.createElement('span');
+ lon.innerHTML = 'lon:' + position.coords.longitude;
+ root.append(lat);
+ root.append(lon);
+
+;
+});
+}
+
+
+})();
 </script>
+</body>
+</html>
